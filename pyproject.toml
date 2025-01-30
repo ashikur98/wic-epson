@@ -1,0 +1,38 @@
+[build-system]
+requires = [ "setuptools>=61", "setuptools_scm[toml]>=6.2" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reinkpy"
+description = "Waste ink counter resetter for some (EPSON) printers."
+authors = [
+	{ name = "Daniel Gerber", email = "dg@atufi.org" },
+]
+urls = { repository = "https://codeberg.org/atufi/reinkpy.git" }
+keywords = [ "printer", "inkjet", "EEPROM" ]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Console",
+ 	"Intended Audience :: ",
+	"License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+dynamic = [ "version" ]
+dependencies = [
+	"pywin32 ; platform_system == 'Windows'",
+	# "libusb-package ; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+usb = [ "pyusb" ]
+ui = [ "asciimatics" ]
+net = ["pysnmp-lextudio == 6.1.2", "pyasn1 == 0.6.0", "zeroconf" ]
+
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+packages = [ "reinkpy" ]
