@@ -45,6 +45,7 @@ CLI one-liners:
 `python -c 'import reinkpy;reinkpy.Device.from_ip("1.2.3.4").epson.reset_waste()'`
 
 
+
 # Warning
 
 This is software. It won't actually replace pads.
@@ -54,3 +55,17 @@ This is software. It won't actually replace pads.
 
 This was started as a port of [ReInk](https://github.com/lion-simba/reink/).
 See also [epson_print_conf](https://github.com/Ircama/epson_print_conf).
+
+
+# Known Issue for MAC
+
+1.
+`usb.core.NoBackendError: No backend available`
+Solution: install libusb
+`brew install libusb`
+
+2.
+`usb.core.USBError: [Errno 13] Access denied (insufficient permissions)`
+Solution: Run as SUDO
+`sudo python /path/to/your/test.py`
+
