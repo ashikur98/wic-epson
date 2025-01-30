@@ -70,4 +70,4 @@ Solution: Run as SUDO
 `sudo python /path/to/your/test.py`
 
 # Origin Project
- This project is clone of https://codeberg.org/atufi/reinkpy, tested to run on Epson ET-2812
+ This project is clone of https://codeberg.org/atufi/reinkpy, tested to run on Epson ET-2812 via USB
